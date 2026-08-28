@@ -133,7 +133,7 @@ curl http://localhost:9224/json/version
 ## Links
 
 - 🐙 **Argos Chromium:** https://github.com/mabeldata/argos-chromium
-- 🐳 **Docker Hub:** https://hub.docker.com/r/mabeldata/argos-chromium
+- 🐳 **GHCR (GitHub Container Registry):** https://github.com/mabeldata/argos-chromium/pkgs/container/argos-chromium
 - 📖 **Documentacao completa:** https://github.com/mabeldata/argos-chromium#readme
 - 🤖 **Hermes Agent:** https://hermes-agent.nousresearch.com/
 
