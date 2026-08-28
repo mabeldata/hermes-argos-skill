@@ -68,7 +68,7 @@ curl -s http://localhost:9224/json/version | jq -r '.webSocketDebuggerUrl'
 | Variavel | Default | Descricao |
 |----------|---------|-----------|
 | `ARGOS_HOST` | `localhost` | Hostname do container |
-| `ARGOS_PORT` | `9223` | Porta CDP exposta |
+| `ARGOS_PORT` | `9224` | Porta CDP exposta (socat) |
 | `ARGOS_URL` | `http://{HOST}:{PORT}` | URL completa CDP |
 
 ## Exemplos
