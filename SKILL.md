@@ -24,7 +24,7 @@ Argos e um container Docker baseado no `linuxserver/chromium` com:
 ```bash
 docker run -d \
   --name argos \
-  -p 3000:3000 -p 3001:3001 -p 9223:9223 \
+  -p 3000:3000 -p 3001:3001 -p 9224:9224 \
   -v argos-config:/config \
   --shm-size=1gb \
   --security-opt seccomp=unconfined \
@@ -127,7 +127,7 @@ curl http://localhost:9224/json/version
 ### "Connection refused"
 
 - Container parado? `docker start argos`
-- Firewall bloqueando? Libere porta 9223
+- Firewall bloqueando? Libere porta 9224
 - Outra instancia usando a porta? Mude `ARGOS_PORT`
 
 ## Links
