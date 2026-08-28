@@ -46,10 +46,10 @@ print(list_tabs(browser))
 
 ```bash
 # Healthcheck
-curl http://localhost:9223/json/version
+curl http://localhost:9224/json/version
 
 # WebSocket URL
-curl -s http://localhost:9223/json/version | jq -r '.webSocketDebuggerUrl'
+curl -s http://localhost:9224/json/version | jq -r '.webSocketDebuggerUrl'
 ```
 
 ## Funcoes Principais
@@ -121,7 +121,7 @@ emails = gmail.evaluate("""() => {
 docker ps | grep argos
 
 # Verifique a porta
-curl http://localhost:9223/json/version
+curl http://localhost:9224/json/version
 ```
 
 ### "Connection refused"

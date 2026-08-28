@@ -16,7 +16,7 @@ from pathlib import Path
 
 # Configuracoes (com fallback)
 ARGOS_HOST = os.environ.get("ARGOS_HOST", "localhost")
-ARGOS_PORT = int(os.environ.get("ARGOS_PORT", "9223"))
+ARGOS_PORT = int(os.environ.get("ARGOS_PORT", "9224"))
 ARGOS_URL = os.environ.get("ARGOS_URL", f"http://{ARGOS_HOST}:{ARGOS_PORT}")
 
 
@@ -37,11 +37,11 @@ def discover_argos(search_range=None):
     if search_range is None:
         search_range = range(9220, 9230)
 
-    # Tenta localhost primeiro
-    if is_port_open("127.0.0.1", 9223):
-        return "http://127.0.0.1:9223"
-    if is_port_open("localhost", 9223):
-        return "http://localhost:9223"
+    # Tenta localhost primeiro (padrao Argos: 9224 externa)
+    if is_port_open("127.0.0.1", 9224):
+        return "http://127.0.0.1:9224"
+    if is_port_open("localhost", 9224):
+        return "http://localhost:9224"
 
     # Tenta descobrir via mDNS/avahi (nao implementado ainda)
     # TODO: implementar mDNS lookup
@@ -59,7 +59,7 @@ def connect_argos(url=None, auto_discover=True):
     Conecta ao Argos Chromium via CDP.
 
     Args:
-        url: URL CDP exata (ex: http://localhost:9223). Se None, usa ARGOS_URL.
+        url: URL CDP exata (ex: http://localhost:9224). Se None, usa ARGOS_URL.
         auto_discover: Se True, tenta descobrir automaticamente.
 
     Returns:
